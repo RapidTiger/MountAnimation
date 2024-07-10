@@ -76,7 +76,7 @@ return (
 > Used CSS transition
 
 ```tsx
-import MountAnimation, {MountStateType} from "mount-animate-react/lib/MountAnimate"
+import MountAnimation, {MountStateType} from "mount-animate-react/lib/MountAnimation"
 import {useState} from "react"
 
 const App = () => {
@@ -116,7 +116,7 @@ const App = () => {
 > Used Time duration
 
 ```tsx
-import MountAnimation, {MountStateType} from "mount-animate-react/lib/MountAnimate"
+import MountAnimation, {MountStateType} from "mount-animate-react/lib/MountAnimation"
 import {useState} from "react"
 
 const App = () => {
@@ -153,7 +153,7 @@ const App = () => {
 > If multiple element used animation
 
 ```tsx
-import MountAnimation, {MountStateType} from "mount-animate-react/lib/MountAnimate"
+import MountAnimation, {MountStateType} from "mount-animate-react/lib/MountAnimation"
 import {useState} from "react"
 
 const App = () => {

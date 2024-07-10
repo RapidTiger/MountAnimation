@@ -52,7 +52,7 @@ const MountAnimation = <T, >({children, mount, params, duration = 0}: MountAnima
 				}
 				timeOutRef.current && clearTimeout(timeOutRef.current)
 			}
-		} else {
+		} else if (element) {
 			const closeChildren = memoElement({
 				state: 'close',
 				ref: elementRef,
