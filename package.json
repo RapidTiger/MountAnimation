@@ -1,0 +1,35 @@
+{
+  "name": "mount-animation-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "tsc",
+    "upload": "npm run build && npm publish"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "react": "^18.3.1",
+    "typescript": "^5.5.3"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
+  "keywords": [
+    "react",
+    "typescript",
+    "mount",
+    "unmount",
+    "animation",
+    "keyframes",
+    "transition",
+    "timeout",
+    "style",
+    "css",
+    "npm"
+  ]
+}
