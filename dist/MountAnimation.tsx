@@ -67,7 +67,7 @@ const MountAnimation = <T, >({children, mount, params, duration = 0}: MountAnima
 				if (duration) timeOutRef.current = setTimeout(enEvent, duration)
 			}
 		}
-	}, [mount, load])
+	}, [children, mount, load])
 
 	return element
 }
