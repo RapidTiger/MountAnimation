@@ -21,7 +21,7 @@ type MountChildrenType<T> = {
 const MountAnimation = <T, >({children, mount, params, duration = 0}: MountAnimationType<T>) => {
 	const [load, setLoad] = useState(0)
 	const [element, setElement] = useState<JSX.Element | null>(null)
-	const memoElement = useCallback((param: MountChildrenType<T>) => children(param), [element])
+	const memoElement = useCallback((param: MountChildrenType<T>) => children(param), [mount])
 	const elementRef = useRef<HTMLElement>(null)
 	const timeOutRef = useRef<NodeJS.Timeout | number>()
 
