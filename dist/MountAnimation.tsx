@@ -27,6 +27,8 @@ const MountAnimation = <T, >({children, mount, params, duration = 0}: MountAnima
 
 	const enEvent = useCallback(() => setElement(null), [])
 
+	const listener = (e: AnimationEvent | TransitionEvent) => e.target === elementRef.current && enEvent()
+
 	useEffect(() => {
 		if (mount && params?.init && !element) {
 			const initChildren = children({
@@ -47,8 +49,8 @@ const MountAnimation = <T, >({children, mount, params, duration = 0}: MountAnima
 			if (openChildren) {
 				setElement(openChildren)
 				if (elementRef.current) {
-					elementRef.current.removeEventListener('animationend', enEvent)
-					elementRef.current.removeEventListener('transitionend', enEvent)
+					elementRef.current.removeEventListener('animationend', listener)
+					elementRef.current.removeEventListener('transitionend', listener)
 				}
 				timeOutRef.current && clearTimeout(timeOutRef.current)
 			}
@@ -61,8 +63,8 @@ const MountAnimation = <T, >({children, mount, params, duration = 0}: MountAnima
 			if (closeChildren) {
 				setElement(closeChildren)
 				if (elementRef.current) {
-					elementRef.current.addEventListener('animationend', enEvent)
-					elementRef.current.addEventListener('transitionend', enEvent)
+					elementRef.current.addEventListener('animationend', listener)
+					elementRef.current.addEventListener('transitionend', listener)
 				}
 				if (duration) timeOutRef.current = setTimeout(enEvent, duration)
 			}

@@ -13,6 +13,8 @@
 
 ****
 
+![Animation](https://github.com/user-attachments/assets/a20dba6f-9c5c-480d-8ed9-565021d31191)
+
 > Used CSS animation
 
 ```css
